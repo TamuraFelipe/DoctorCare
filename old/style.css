@@ -1,0 +1,379 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+:root{
+    --primary-color: #00856F;
+    --primary-color-light: #DCE9E2;
+    --primary-color-dark: #00453A;
+
+    --bg-light: #f9f9f9;
+    --bg-about: #FFFAF1;
+
+    --text-paragraph: #495057;
+    --text-header: #212529;
+
+    font-size: 62.5%;
+    font-family: 'DM Sans', Sans-Serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-size: 1.6rem;
+}
+ul{
+    list-style-type: none;
+}
+/*==========GLOBAL==========*/
+
+#navigation, #home{
+    background-color: var(--primary-color-light);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin-inline: auto;
+}
+.btn-green-dark{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26.5rem;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    border-radius: 3rem;
+    background-color: var(--primary-color);
+    padding: 1.7rem 0;
+    color: #fff;
+    gap: 2rem;
+}
+.btn-green-light,
+.btn-green-dark{
+    transition: background 300ms;
+}
+.btn-green-light{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 19.0rem;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    border-radius: 3rem;
+    background-color: var(--primary-color-light);
+    padding: 1rem 2.4rem ;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    gap: 2rem;
+}
+.btn-green-dark:hover{
+    background-color: var(--primary-color-dark);
+}
+.btn-green-light:hover{
+    background-color: var(--primary-color-dark);
+    color: var(--primary-color-light);
+    border: 1px solid transparent;
+}
+/*==========NAVIGATION==========*/
+header#navigation .container{
+    justify-content: space-between;
+    padding-top: 2rem;    
+}
+header#navigation .menu ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header#navigation .menu ul li a{
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+    color: var(--primary-color);
+    padding: 2.4rem 1.2rem;
+}
+header#navigation .menu ul li a:hover{
+    border-bottom: 2px solid var(--primary-color-dark);
+    color: var(--primary-color-dark);
+}
+/*==========HOME==========*/ /*==========MAIN==========*/
+section#home{
+    width: 100%;
+    background-color: var(--primary-color-light);
+    padding-block: 4rem 0
+}
+section#home .container{
+    justify-content: space-between;
+}
+section#home .left-side{
+    width: 60%;
+}
+section#home .left-side h4{
+    font-size: 1.4rem;
+    line-height: 150%;
+    color: var(--primary-color); 
+    margin-bottom: 1.6rem;
+    text-transform: uppercase;
+}
+section#home .left-side h1{
+    font-size: 5.2rem;
+    line-height: 130%;
+    color: var(--text-header);
+    margin-bottom: 2.4rem;
+}
+section#home .left-side p{
+    font-size: 1.8rem;
+    line-height: 150%;
+    margin-bottom: 3.2rem;
+}
+section#home .right-side img{
+    /*height: 52rem;*/
+}
+/*==========STATS==========*/
+section#stats{
+    background: linear-gradient(180deg, var(--primary-color-light) 50%, var(--bg-light) 50%);;
+}
+section#stats .container{
+    background-color: #FFFAF1;
+    align-items: center;
+    height: 20rem;
+}
+section#stats .container .stat{
+    flex: 1;
+
+}
+section#stats .container .stat + .stat {
+    border-left: 1px solid var(--primary-color-light);
+}
+section#stats .stat h2{
+    font-size: 4.8rem;
+    line-height: 130%;
+    font-weight: 700;
+    color: var(--text-header);
+    text-align: center;
+}
+section#stats .stat p{
+    font-size: 1.6rem;
+    line-height: 150%;
+    color: var(--primary-color-dark);
+    text-align: center;
+}
+/*==========SERVICES==========*/
+section#services{
+    background-color: var(--bg-light);
+    padding-block: 15rem;
+}
+section#services .container{
+    flex-direction: column;
+}
+section#services .container h5{
+    font-size: 1.4rem;
+    line-height: 150%;
+    color: var(--primary-color-dark);
+    text-align: center;
+}
+section#services .container > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section#services .container h2{
+    font-size: 4.0rem;
+    line-height: 5.2rem;
+    text-align: center;
+    color: var(--text-header);
+    width: 60%;
+}
+section#services .container .cards{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    margin-top: 6rem;
+}
+section#services .container .cards .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid var(--primary-color-light);
+    padding: 3rem;
+    gap: 1.6rem;
+    flex: 1 35.0rem;
+}
+section#services .container .cards .card img{
+    width: fit-content;
+}
+/*==========ABOUT==========*/
+section#about{
+    background-color: var(--bg-about);
+}
+section#about .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 16.0rem;
+    
+}
+section#about .container > div:nth-child(1){
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+section#about .container > div:nth-child(1) img{
+    max-width: 100%;
+}
+section#about .container > div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    flex: 1;
+    gap: 1.6rem;
+    padding-inline: 4rem;
+}
+section#about .container > div:nth-child(2) h4{
+    font-size: 1.4rem;
+    line-height: 150%;
+    color: var(--primary-color);
+}
+section#about .container > div:nth-child(2) p{
+    text-align: justify;
+    font-size: 1.6rem;
+    line-height: 150%;
+    color: var(--text-paragraph);
+}
+/*==========CONTACT==========*/
+section#contact .container{
+    padding-block: 16.0rem;
+    justify-content: space-between;
+}
+section#contact .container .contact-ways{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4rem;
+    width: 30%;
+}
+section#contact .container .contact-ways h2{
+    font-size: 4.0rem;
+    list-style: 5.2rem;
+    color: var(--text-header);
+}
+section#contact .container .contact-image{
+    display: flex;
+    justify-content: flex-end;
+    width: 60%;
+}
+section#contact .container .contact-image img{
+    width: 100%;
+}
+.pin,
+.email{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height:0;
+}
+/*==========FOOTER==========*/
+footer{
+    width: 100%;
+    height: 27.0rem;
+    background-color: var(--primary-color);
+}
+footer .container{
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .container .copy-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+footer .container .copy-right span img{
+    width: 80%;
+}
+footer .container .copy-right span:not(span:nth-child(1)){
+    color: rgb(255, 255, 255);
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+}
+footer .container .socials-midia ul{
+    display: flex;
+    gap: 3.2rem;
+}
+
+/*==========RESPONSIVE==========*/
+@media (max-width: 912px){
+    section#stats .container{
+        width: 100%;
+    }
+}
+@media (max-width: 768px){
+    html{
+        font-size: 1.4rem;
+    }
+    header#navigation{
+        display: none;
+    }
+    .btn-green-dark{
+        width: 100%;
+    }
+    .container{
+        flex-direction: column;
+        gap: 5rem;
+        
+    }
+    section#home .left-side{
+        text-align: center;
+        width: 100%;
+    }
+    section#home .right-side img{
+        width: 100%;
+    }
+    section#home .left-side .btn-green-dark{
+        width: 100%;
+    }
+    section#stats .container .stat + .stat{
+        border: none;
+    }
+    section#stats .container{
+        height: 100%;
+        padding-block: 5rem;
+    }
+    section#about .container{
+        flex-direction: column-reverse;
+    }
+    section#about .container > div:nth-child(1){
+        justify-content: center;
+        width: 100%;
+    }
+    section#about .container > div:nth-child(2){
+        width: 100%;
+    }
+    section#contact .container .contact-ways{
+        width: 100%;
+    }
+    section#contact .container .contact-image{
+        width: 100%;
+        justify-content: center;
+    }
+    footer .container{
+        justify-content: center;
+    }
+    footer .container .copy-right{
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 320px){
+    :root{
+        font-size: 50%;
+    }
+}
